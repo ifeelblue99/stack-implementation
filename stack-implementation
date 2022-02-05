@@ -1,0 +1,28 @@
+function Stack(){
+    this.itemsArray = []
+    
+    this.add = function(item){
+      this.itemsArray.push(item)
+    }
+    this.remove = function(){
+      return this.itemsArray.pop()
+    }
+    this.peak = function(){
+      return !this.itemsArray.length===0 ? this.itemsArray[0] : undefined;
+    }
+    this.size = function(){
+       return !this.itemsArray.length===0 ? this.itemsArray.length: 0;
+    }
+    this.isEmpty = function(){
+      return this.itemsArray.length === 0
+    }
+    this.printStack = function(){
+      console.log(this.itemsArray)
+    }
+}
+
+// examples
+
+let stc = new Stack()
+
+stc.printStack()
